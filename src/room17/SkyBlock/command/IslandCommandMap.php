@@ -11,35 +11,35 @@ declare(strict_types=1);
 namespace room17\SkyBlock\command;
 
 
-use pocketmine\command\Command;
-use pocketmine\command\CommandSender;
-use pocketmine\command\PluginIdentifiableCommand;
-use pocketmine\Player;
-use pocketmine\plugin\Plugin;
-use room17\SkyBlock\command\presets\AcceptCommand;
-use room17\SkyBlock\command\presets\BlocksCommand;
-use room17\SkyBlock\command\presets\CategoryCommand;
-use room17\SkyBlock\command\presets\ChatCommand;
-use room17\SkyBlock\command\presets\CooperateCommand;
-use room17\SkyBlock\command\presets\CreateCommand;
-use room17\SkyBlock\command\presets\DemoteCommand;
-use room17\SkyBlock\command\presets\DenyCommand;
-use room17\SkyBlock\command\presets\DisbandCommand;
-use room17\SkyBlock\command\presets\FireCommand;
-use room17\SkyBlock\command\presets\HelpCommand;
-use room17\SkyBlock\command\presets\InviteCommand;
-use room17\SkyBlock\command\presets\JoinCommand;
-use room17\SkyBlock\command\presets\BanishCommand;
-use room17\SkyBlock\command\presets\LeaveCommand;
-use room17\SkyBlock\command\presets\LockCommand;
-use room17\SkyBlock\command\presets\MembersCommand;
-use room17\SkyBlock\command\presets\PromoteCommand;
-use room17\SkyBlock\command\presets\SetSpawnCommand;
-use room17\SkyBlock\command\presets\TransferCommand;
-use room17\SkyBlock\command\presets\VisitCommand;
-use room17\SkyBlock\session\SessionLocator;
-use room17\SkyBlock\SkyBlock;
-use room17\SkyBlock\utils\message\MessageContainer;
+use pocketmine\command\Command\Command;
+use pocketmine\command\CommandSender\CommandSender;
+use pocketmine\command\PluginIdentifiableCommand\PluginIdentifiableCommand;
+use pocketmine\Player\Player;
+use pocketmine\plugin\Plugin\Plugin;
+use room17\SkyBlock\command\presets\AcceptCommand\AcceptCommand;
+use room17\SkyBlock\command\presets\BlocksCommand\BlocksCommand;
+use room17\SkyBlock\command\presets\CategoryCommand\CategortCommand;
+use room17\SkyBlock\command\presets\ChatCommand\ChatCommand;
+use room17\SkyBlock\command\presets\CooperateCommand\CooperateCommand;
+use room17\SkyBlock\command\presets\CreateCommand\CreateCommand;
+use room17\SkyBlock\command\presets\DemoteCommand\DemoteCommand;
+use room17\SkyBlock\command\presets\DenyCommand\DenyCommand;
+use room17\SkyBlock\command\presets\DisbandCommand\DisbandCommand;
+use room17\SkyBlock\command\presets\FireCommand\FireCommand;
+use room17\SkyBlock\command\presets\HelpCommand\HelpCommand;
+use room17\SkyBlock\command\presets\InviteCommand\InviteCommand;
+use room17\SkyBlock\command\presets\JoinCommand\JoinCommand;
+use room17\SkyBlock\command\presets\BanishCommand\BanishCommand;
+use room17\SkyBlock\command\presets\LeaveCommand\LeaveCommand;
+use room17\SkyBlock\command\presets\LockCommand\LockCommand;
+use room17\SkyBlock\command\presets\MembersCommand\MembersCommand;
+use room17\SkyBlock\command\presets\PromoteCommand\PromoteCommand;
+use room17\SkyBlock\command\presets\SetSpawnCommand\SetSpawnCommand;
+use room17\SkyBlock\command\presets\TransferCommand\TransferCommand;
+use room17\SkyBlock\command\presets\VisitCommand\VisitCommand;
+use room17\SkyBlock\session\SessionLocator\SessionLocator;
+use room17\SkyBlock\SkyBlock\Skyblock;
+use room17\SkyBlock\utils\message\MessageContainer\MessageContainer;
 
 class IslandCommandMap extends Command implements PluginIdentifiableCommand {
 
@@ -85,18 +85,18 @@ class IslandCommandMap extends Command implements PluginIdentifiableCommand {
         return null;
     }
 
-    public function registerCommand(IslandCommand $command): void {
+    public function registerCommand(IslandCommand $command) {
         $this->commands[strtolower($command->getName())] = $command;
     }
 
-    public function unregisterCommand(string $commandName): void {
+    public function unregisterCommand(string $commandName) {
         $name = strtolower($commandName);
         if(isset($this->commands[$name])) {
             unset($this->commands[$name]);
         }
     }
 
-    public function registerDefaultCommands(): void {
+    public function registerDefaultCommands() {
         $this->registerCommand(new HelpCommand($this));
         $this->registerCommand(new CreateCommand($this));
         $this->registerCommand(new JoinCommand());

@@ -1,4 +1,4 @@
-[![](https://poggit.pmmp.io/shield.api/SkyBlock)](https://poggit.pmmp.io/p/SkyBlock)
+[![]
 # SkyBlock
 
 A powerful core for SkyBlock servers

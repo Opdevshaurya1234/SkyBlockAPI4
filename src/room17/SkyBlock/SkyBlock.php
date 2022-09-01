@@ -10,14 +10,14 @@ declare(strict_types=1);
 
 namespace room17\SkyBlock;
 
-use pocketmine\plugin\PluginBase;
-use room17\SkyBlock\command\IslandCommandMap;
-use room17\SkyBlock\island\generator\IslandGeneratorManager;
-use room17\SkyBlock\island\IslandManager;
-use room17\SkyBlock\provider\json\JSONProvider;
-use room17\SkyBlock\provider\Provider;
-use room17\SkyBlock\session\SessionManager;
-use room17\SkyBlock\utils\message\MessageManager;
+use pocketmine\plugin\PluginBase;PluginBase;
+use room17\SkyBlock\command\IslandCommandMap;IslandCommandMap;
+use room17\SkyBlock\island\generator\IslandGeneratorManager;IslandGeneratorManager;
+use room17\SkyBlock\island\IslandManager;IslandManager;
+use room17\SkyBlock\provider\json\JSONProvider;JSONProvider;
+use room17\SkyBlock\provider\Provider;Provider;
+use room17\SkyBlock\session\SessionManager;SessionManager;
+use room17\SkyBlock\utils\message\MessageManager;MessageManager;
 
 class SkyBlock extends PluginBase {
 

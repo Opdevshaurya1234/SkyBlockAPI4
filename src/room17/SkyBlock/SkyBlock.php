@@ -58,7 +58,7 @@ class SkyBlock extends PluginBase {
         $this->saveResource("settings.yml");
     }
 
-    public function onEnable(): void {
+    public function onEnable() {
         $this->settings = new SkyBlockSettings($this);
         $this->provider = new JSONProvider($this);
         $this->sessionManager = new SessionManager($this);

@@ -11,10 +11,10 @@ declare(strict_types=1);
 namespace room17\SkyBlock;
 
 
-use room17\SkyBlock\island\CategoryIds;
-use pocketmine\item\Item;
-use pocketmine\utils\Config;
-use room17\SkyBlock\utils\Utils;
+use room17\SkyBlock\island\CategoryIds\CategoryIds;
+use pocketmine\item\Item\Item
+use pocketmine\utils\Config\Config
+use room17\SkyBlock\utils\Utils\Utils
 
 class SkyBlockSettings {
 

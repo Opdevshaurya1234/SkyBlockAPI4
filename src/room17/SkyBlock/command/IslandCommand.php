@@ -11,9 +11,9 @@ declare(strict_types=1);
 namespace room17\SkyBlock\command;
 
 
-use room17\SkyBlock\island\RankIds;
-use room17\SkyBlock\session\Session;
-use room17\SkyBlock\utils\message\MessageContainer;
+use room17\SkyBlock\island\RankIds\RanksIds;
+use room17\SkyBlock\session\Session\Session;
+use room17\SkyBlock\utils\message\MessageContainer\MessageContainer;
 
 abstract class IslandCommand {
 
